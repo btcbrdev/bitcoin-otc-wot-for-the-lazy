@@ -72,7 +72,7 @@ public class AuthenticatedUser extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jLabel1.setText("Parabéns! Você está autenticado no sistema.");
 
-        jLabel2.setText("Verifique seu nível de confiança entre dois usuários");
+        jLabel2.setText("Verifique o nível de confiança entre dois usuários");
 
         jLabel3.setText("Usuário de origem:");
 

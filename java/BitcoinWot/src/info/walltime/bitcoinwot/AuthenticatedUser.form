@@ -138,7 +138,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Verifique seu n&#xed;vel de confian&#xe7;a entre dois usu&#xe1;rios"/>
+        <Property name="text" type="java.lang.String" value="Verifique o n&#xed;vel de confian&#xe7;a entre dois usu&#xe1;rios"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
