@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="java:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/java_jar</output-path>
+    <root id="archive" name="java.jar">
+      <element id="module-output" name="java" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/BitcoinWot/lib/scrypt.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/BitcoinWot/lib/pircbot.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/BitcoinWot/lib/bitcoinj-core-0.13-bundled.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
