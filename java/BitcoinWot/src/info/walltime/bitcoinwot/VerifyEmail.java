@@ -52,23 +52,23 @@ public class VerifyEmail extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Checking email");
+        setTitle("Verificando email");
         setAlwaysOnTop(true);
 
-        jButton1.setText("Validate email");
+        jButton1.setText("Validar email");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("You'll receive an email from Freenode <noreply.support@freenode.net>");
+        jLabel1.setText("Você vai receber um email da Freenode <noreply.support@freenode.net>");
 
-        jLabel2.setText("Please copy the command sent by email that looks like this:");
+        jLabel2.setText("Por favor copie um comando contido no email parecido com isto:");
 
-        jLabel3.setText("/msg NickServ VERIFY REGISTER <yournick> xgfkejusqhsb");
+        jLabel3.setText("/msg NickServ VERIFY REGISTER <seunick> xgfkejusqhsb");
 
-        jLabel4.setText("Then paste it here:");
+        jLabel4.setText("E depois cole aqui:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -116,7 +116,7 @@ public class VerifyEmail extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if (jTextField1.getText().length() == 0) {
             JOptionPane.showMessageDialog(null, 
-                            "Open your email and paste here the line starting with /msg NickServ.");
+                            "Abra seu email e cole aqui a linha que começa com /msg NickServ.");
         } else {
             BitcoinWot.BOT.sendRawLine(jTextField1.getText());
             BitcoinWot.BOT.sendMessage("nickserv", "INFO " + BitcoinWot.LOGIN.getjTextField1().getText());

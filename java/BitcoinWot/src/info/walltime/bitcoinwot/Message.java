@@ -42,22 +42,22 @@ public class Message extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Sing message");
+        setTitle("Assinar mensagem");
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jLabel1.setText("Type below the message to be signed:");
+        jLabel1.setText("Digite a mensagem a ser assinada abaixo:");
 
-        jButton1.setText("Sign");
+        jButton1.setText("Assinar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jLabel2.setText("Signature:");
+        jLabel2.setText("Assinatura:");
 
         jTextArea2.setEditable(false);
         jTextArea2.setColumns(20);
@@ -71,7 +71,7 @@ public class Message extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jTextArea2);
 
-        jButton2.setText("Copy to clipboard...");
+        jButton2.setText("Copiar para a área de trabalho...");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);

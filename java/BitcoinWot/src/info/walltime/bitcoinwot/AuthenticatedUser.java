@@ -67,60 +67,60 @@ public class AuthenticatedUser extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Bitcoin OTC WoT for the lazy");
+        setTitle("Bitcoin OTC WoT para preguiçosos");
 
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jLabel1.setText("Congratulations! You have been authenticated into the system.");
+        jLabel1.setText("Parabéns! Você está autenticado no sistema.");
 
-        jLabel2.setText("Check the trust level between two users");
+        jLabel2.setText("Verifique seu nível de confiança entre dois usuários");
 
-        jLabel3.setText("Origin user:");
+        jLabel3.setText("Usuário de origem:");
 
-        jButton1.setText("Verify...");
+        jButton1.setText("Verificar...");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jLabel4.setText("Qualify a user in the network:");
+        jLabel4.setText("Qualifique algum usuário na rede:");
 
-        jLabel5.setText("What is your trust level towards him (from -10 to +10)?");
+        jLabel5.setText("Qual é o seu grau de confiança em relação a ele (de -10 a +10)?");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0 . Neutral, I don't know him enough", "-10 . Professional con man", "-9 . Very likely a con man", "-8 . Likely a con man", "-7 . I think he may be a con man", "-6 . I don't trust him at all", "-5 . Very suspicious", "-4 . A lot of \"red flags\", be careful", "-3 . He's suspicious, but I don't know him that well", "-2 . He screwed it up more than once, better be careful", "-1 . He screwed up a few times", "+1 . I give him a vote of confidence", "+2 . I know him online, seems honest", "+3 . I know him online, and have traded with him several times", "+4 . I know him well, he's very active in the community", "+5 . I trust him very much, we are friends", "+6 . I know him personally, seemed very honest", "+7 . I trust him a lot, great friend, greatly recommend him", "+8 . Very recommended, a personal friend", "+9 . Childhood friend and family friend", "+10 . I'd stick my neck out for him, I trust him as much as I trust myself" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0 . Neutro, não conheço o suficiente", "-10 . Golpista profissional", "-9 . Muito provável que seja golpista profissional", "-8 . Provável que seja golpista profissional", "-7 . Acho que é um golpista profissional", "-6 . Não confio nem um pouco", "-5 . Muito suspeito", "-4 . Tem muitas \"red flags\", cuidado", "-3 . Suspeito, mas não conheço tanto assim", "-2 . Cometeu mais de um deslize, melhor ter cuidado", "-1 . Cometeu alguns deslizes", "+1 . Dou um voto de confiança", "+2 . Conheço virtualmente, parece honesto", "+3 . Conheço virtualmente, já negociei várias vezes com ele", "+4 . Conheço bem, é bem ativo na comunidade", "+5 . Confio muito, somos amigos", "+6 . Conheço pessoalmente, me pareceu bem honesto", "+7 . Confio demais, grande amigo, eu recomendo muito", "+8 . Super recomendado, amigo pessoal", "+9 . Amigo de infância e amigo da família", "+10 . Coloco minha mão no fogo, confio o tanto quanto a mim" }));
 
-        jButton2.setText("Qualify");
+        jButton2.setText("Qualificar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Check received testimonies...");
+        jButton3.setText("Verificar depoimentos que recebeu...");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Check scores you have given...");
+        jButton4.setText("Verificar notas que deu...");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
 
-        jLabel6.setText("Destination user:");
+        jLabel6.setText("Usuário de destino:");
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jLabel7.setText("Testimony, be honest:");
+        jLabel7.setText("Depoimento, seja sincero:");
 
-        jLabel9.setText("Other features:");
+        jLabel9.setText("Outras funcionalidades:");
 
-        jButton5.setText("Sign a message, to prove you're yourself (contract)...");
+        jButton5.setText("Assinar uma mensagem, pra provar que você é você (contrato)...");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -245,12 +245,12 @@ public class AuthenticatedUser extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         if (jTextField2.getText().length() == 0) {
             JOptionPane.showMessageDialog(null, 
-                            "You have to type the username you want to qualify in the correct field.");            
+                            "Você precisa digitar o nome do usuário que deseja qualificar no campo correto.");            
         } else if (jComboBox1.getSelectedIndex() > 0 && jTextArea1.getText().length() < 10) {
             JOptionPane.showMessageDialog(null, 
-                            "Don't be that much lazy, will you?! :)\n\n"
-                            + "Please create a nice testimony. Preferrably in english.\n"
-                            + "Who is this person? Where did you meet him? Why do you trust or distrust him?");
+                            "Também não seja tão preguiçoso assim, vai! :)\n\nCrie um depoimento legal."
+                                    + " De preferência em inglês, mas pode ser em português se quiser."
+                                    + "\nQuem é essa pessoa? Onde a conheceu? Por que confia ou deixa de confiar nela?");
         } else {
             int[] levels = {0, -10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 

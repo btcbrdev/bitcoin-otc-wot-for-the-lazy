@@ -59,11 +59,11 @@ public class RegisteringWot extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Registering at OTC WoT");
+        setTitle("Regitrando no OTC WoT");
 
-        jLabel1.setText("Registering user at Bitcoin OTC WoT...");
+        jLabel1.setText("Registrando usuário no Bitcoin OTC WoT...");
 
-        jButton1.setText("Enter...");
+        jButton1.setText("Entrar no sistema...");
         jButton1.setEnabled(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

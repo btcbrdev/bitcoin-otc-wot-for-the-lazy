@@ -24,7 +24,7 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         if (BitcoinWot.LOGIN != null) {
-            throw new RuntimeException("Two instances are not allowed at the same time.");
+            throw new RuntimeException("Not possible two instances at the same time.");
         }
 
         BitcoinWot.LOGIN = this;
@@ -58,12 +58,12 @@ public class Login extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Bitcoin OTC WoT for the lazy");
+        setTitle("Bitcoin OTC WoT para preguiçosos");
         setAlwaysOnTop(true);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Bitcoin OTC WoT for the lazy");
+        jLabel1.setText("Bitcoin OTC WoT para preguiçosos");
 
         jLabel4.setText("Nickname*:");
 
@@ -73,7 +73,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setText("* low caps without spaces or symbols.");
+        jLabel5.setText("* minúsculo sem espaços ou símbolos.");
 
         jButton1.setText("Entrar");
         jButton1.setEnabled(false);
@@ -83,7 +83,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Register...");
+        jButton2.setText("Registrar...");
         jButton2.setEnabled(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,7 +140,7 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if (jTextField1.getText().length() < 3) {
-            JOptionPane.showMessageDialog(null, "This nick is too short.");
+            JOptionPane.showMessageDialog(null, "Muito curto esse nick.");
         } else {
             jButton1.setEnabled(false);
             setCursor(new Cursor(Cursor.WAIT_CURSOR));
@@ -153,7 +153,7 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         if (jTextField1.getText().length() < 3) {
-            JOptionPane.showMessageDialog(null, "This nick is too short.");
+            JOptionPane.showMessageDialog(null, "Muito curto esse nick.");
         } else {
             jButton2.setEnabled(false);
             setCursor(new Cursor(Cursor.WAIT_CURSOR));

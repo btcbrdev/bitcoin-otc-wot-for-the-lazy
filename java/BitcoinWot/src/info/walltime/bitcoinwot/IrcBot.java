@@ -48,8 +48,8 @@ public class IrcBot extends PircBot {
                 });
             } else if (message.contains("Signature verification failed")) {
                 JOptionPane.showMessageDialog(null, 
-                            "Authentication error.\n\nThis user was probably not created using Bitcoin OTC WoT for the lazy."
-                            + "\n\nCongratulations, you are not a lazy person! :)");
+                            "Erro na autenticação.\n\nProvavelmente esse usuário não foi criado usando "
+                                    + "Bitcoin OTC WoT para preguiçosos.\n\nParabéns, você não é um preguiçoso! :)");
 
                 if (BitcoinWot.PASSWORD != null) {
                     BitcoinWot.PASSWORD.dispatchEvent(new WindowEvent(BitcoinWot.PASSWORD, 
@@ -58,16 +58,16 @@ public class IrcBot extends PircBot {
             } else if (message.contains("You have to have received some ratings in order to rate other users")
                      || message.contains("Your nick does not exist in the Rating database")) {
                 JOptionPane.showMessageDialog(null, 
-                        "Hmmmmmm... Seems like you are new here, right?"
-                        + "\n\nUnfortunately it's not possible to qualify someone if you don't have a positive reputation yourself."
-                        + "\n\nBut don't give up. You only have to convince one person with reputation to give you a vote of confidence."
-                        + "\n\nEnter a Bitcoin OTC WoT community at Facebook and ask someone you know.");
+                        "Hmmmmmm... Parece que você é novo por aqui, não?"
+                        + "\n\nInfelizmente não é possível qualificar ninguém se você não tem reputação positiva."
+                        + "\n\nMas não desista. Você só precisa convencer alguém que já tenha reputação a te dar um voto de confiança."
+                        + "\n\nEntre na comunidade Bitcoin OTC WoT Brasil no Facebook e peça a alguém que você conheça.");
             } else if (message.contains("You have not given this nick a rating previously")
                         || message.contains("Rating entry successful")
                         || message.contains("Successfully removed your rating")) {
 
                 JOptionPane.showMessageDialog(null, 
-                        "Cool! Your have successfully qualified another user! :)");
+                        "Legal! Você qualificou um usuário com sucesso! :)");
             }
         }
     }
@@ -85,7 +85,7 @@ public class IrcBot extends PircBot {
                 
                 if (!BitcoinWot.REGISTERING.get()) {
                     JOptionPane.showMessageDialog(null, 
-                            "This nick is not registered, please register first.");
+                            "Esse nick não está registrado, por favor registre antes.");
 
                     BitcoinWot.LOGIN.getjButton1().setEnabled(true);
                     BitcoinWot.LOGIN.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
@@ -94,7 +94,7 @@ public class IrcBot extends PircBot {
                     if (BitcoinWot.VERIFYING_EMAIL.get()) {
                         if (BitcoinWot.REGISTERING.get()) {
                             JOptionPane.showMessageDialog(null, 
-                                    "An error occurred while verifying the email.");
+                                    "Ocorreu um erro na verificação do email.");
                         }   
                     } else {
                         BitcoinWot.LOGIN.getjButton2().setEnabled(true);
@@ -120,7 +120,7 @@ public class IrcBot extends PircBot {
                         });
                     } else {
                         JOptionPane.showMessageDialog(null, 
-                                "This nick is already taken, please pick another one.");
+                                "Esse nick já existe, por favor escolha outro.");
 
                         BitcoinWot.LOGIN.getjButton2().setEnabled(true);
                         BitcoinWot.LOGIN.setCursor(new Cursor(Cursor.DEFAULT_CURSOR)); 
@@ -136,7 +136,7 @@ public class IrcBot extends PircBot {
                     });
                 }
             } if (notice.contains("Invalid password")) {
-                    JOptionPane.showMessageDialog(null, "Wrong password!");
+                    JOptionPane.showMessageDialog(null, "Senha incorreta!");
 
                 if (BitcoinWot.PASSWORD != null) {
                     BitcoinWot.PASSWORD.dispatchEvent(new WindowEvent(BitcoinWot.PASSWORD, 

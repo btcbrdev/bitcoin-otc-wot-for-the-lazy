@@ -28,11 +28,11 @@ public class NewPassword extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("New password");
+        setTitle("Nova senha");
 
-        jLabel1.setText("Choose a password:");
+        jLabel1.setText("Escolha uma senha:");
 
-        jButton1.setText("Create keypair...");
+        jButton1.setText("Criar par de chaves...");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -45,7 +45,7 @@ public class NewPassword extends javax.swing.JFrame {
         jTextArea1.setForeground(new java.awt.Color(204, 0, 0));
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("WARNING:\n\nBe very cautious when creating this password because WoT for the lazy will derive your authentication key from your user and password combined. Use a safe password, with at least 8 characters. Do not use dictionary words. Write it down on a paper and store it on a safe place, away from thieves and bookworms.");
+        jTextArea1.setText("ATENÇÃO:\n\nSeja muito cuidadoso ao criar essa senha pois o WoT para preguiçosos vai derivar sua chave de autenticação a partir do seu usuário + essa senha. Use uma senha segura, de no mínimo 8 caracteres. Não utilize palavras de dicionário. Anote-a num papel e guarde em local seguro, longe de traças e ladrões.");
         jTextArea1.setWrapStyleWord(true);
         jTextArea1.setBorder(null);
         jTextArea1.setOpaque(false);
@@ -94,7 +94,7 @@ public class NewPassword extends javax.swing.JFrame {
 
         if (pwd.length() < 8) {
             JOptionPane.showMessageDialog(null, 
-                            "You said you were lazy, not stupid! Use a decent password, please.");
+                            "Você disse que era preguiçoso, não burro! Use uma senha decente por favor.");
         } else {        
             BitcoinWot.PASSWORD_STRING = new String(jPasswordField1.getPassword());
 

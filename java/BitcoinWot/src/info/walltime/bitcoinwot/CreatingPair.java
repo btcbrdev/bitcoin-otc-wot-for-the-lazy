@@ -52,14 +52,14 @@ public class CreatingPair extends javax.swing.JFrame {
 
                     setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
 
-                    jLabel1.setText("Successfully created pair!");
+                    jLabel1.setText("Par criado com sucesso!");
                     jButton1.setEnabled(true);
 
                 } catch (Exception ex) {
                     ex.printStackTrace();
 
                     JOptionPane.showMessageDialog(null, 
-                            "An error occurred while deriving keys: " + ex);
+                            "Erro ao derivar as chaves: " + ex);
                 }
             }
         }).start();
@@ -86,11 +86,11 @@ public class CreatingPair extends javax.swing.JFrame {
         jTextField3 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Key creation");
+        setTitle("Criação de chave");
 
-        jLabel1.setText("Creating keypair for authentication, please wait...");
+        jLabel1.setText("Criando par de chaves para autenticação, por favor aguarde...");
 
-        jLabel2.setText("Public address:");
+        jLabel2.setText("Endereço público:");
 
         jTextField1.setEditable(false);
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -99,7 +99,7 @@ public class CreatingPair extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("Private key:");
+        jLabel3.setText("Chave privada:");
 
         jTextField2.setEditable(false);
 
@@ -109,13 +109,13 @@ public class CreatingPair extends javax.swing.JFrame {
         jTextArea1.setForeground(new java.awt.Color(204, 0, 0));
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("WARNING:\n\nYou will find right above your public key and your private key derived from your user and password. You don't need to use this information anywhere else in order to use Bitcoin OTC WoT for the lazy, however, it's highly recommended that you write this information down in a safe place in case you wish to receive or spend bitcoin in the future using the automatically generated bitcoin address, or in case you stop being lazy and want to use traditional OTC WoT with the same user created for you here.");
+        jTextArea1.setText("ATENÇÃO:\n\nLogo acima você encontra sua chave pública e sua chave privada derivada do seu usuário e senha. Você não precisa usar essa informação em nenhum outro lugar pra usar o Bitcoin OTC WoT para preguiçosos, porém é altamente recomendável que você anote esses valores num local seguro caso você deseje no futuro receber ou gastar bitcoin utilizando o endereço de Bitcoin automaticamente gerado, ou caso você deixe de ser preguiçoso e queira utilizar o OTC WoT tradicional com o mesmo usuário criado pra você aqui.");
         jTextArea1.setWrapStyleWord(true);
         jTextArea1.setBorder(null);
         jTextArea1.setOpaque(false);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jButton1.setText("Send verification email...");
+        jButton1.setText("Enviar email de verificação...");
         jButton1.setEnabled(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,7 +123,7 @@ public class CreatingPair extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setText("Type your email:");
+        jLabel4.setText("Digite seu email:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -183,7 +183,7 @@ public class CreatingPair extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if (jTextField3.getText().length() == 0) {
             JOptionPane.showMessageDialog(null, 
-                            "Please type a valid email.");
+                            "Por favor digite um email.");
         } else {
             BitcoinWot.BOT.sendMessage("nickserv", "REGISTER "
                         + BitcoinWot.PASSWORD_STRING + " " + jTextField3.getText());

@@ -33,11 +33,11 @@ public class Password extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Authentication");
+        setTitle("Autenticação");
 
-        jLabel1.setText("Type your password:");
+        jLabel1.setText("Digite a sua senha:");
 
-        jButton1.setText("Login...");
+        jButton1.setText("Fazer login...");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -77,7 +77,7 @@ public class Password extends javax.swing.JFrame {
 
         if (new String(jPasswordField1.getPassword()).isEmpty()) {
             JOptionPane.showMessageDialog(null, 
-            "Are you serious? You said you were lazy, not stupid.");
+            "Não brinca. Você disse que era preguiçoso, não burro.");
         } else {        
             jButton1.setEnabled(false);
             setCursor(new Cursor(Cursor.WAIT_CURSOR));
@@ -106,7 +106,7 @@ public class Password extends javax.swing.JFrame {
                         e.printStackTrace();            
 
                         JOptionPane.showMessageDialog(null, 
-                                "Error deriving keys: " + e);
+                                "Erro ao derivar as chaves: " + e);
                     }
                 }
             }).start();
