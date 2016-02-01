@@ -22,7 +22,7 @@ public class BitcoinWot {
     public static VerifyEmail VERIFY_EMAIL;
 
     public static void main(String[] args) throws Exception {
-        if (args.length > 0 && args[1].equals("-debug")) {
+        if (args.length > 0 && args[0].equals("-debug")) {
             BitcoinWot.DEBUG = true;
         }
 
