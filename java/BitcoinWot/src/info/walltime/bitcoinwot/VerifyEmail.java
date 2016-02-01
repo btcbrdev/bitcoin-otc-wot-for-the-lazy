@@ -118,8 +118,12 @@ public class VerifyEmail extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, 
                             "Abra seu email e cole aqui a linha que começa com /msg NickServ.");
         } else {
-            BitcoinWot.BOT.sendRawLine(jTextField1.getText());
-            BitcoinWot.BOT.sendMessage("nickserv", "INFO " + BitcoinWot.LOGIN.getjTextField1().getText());
+            String[] tokens = jTextField1.getText().split(" ");
+            String token = tokens[tokens.length - 1];
+            BitcoinWot.BOT.sendMessage("nickserv", "VERIFY REGISTER " 
+                    + BitcoinWot.LOGIN.getjTextField1().getText() + " " + token);
+            BitcoinWot.BOT.sendMessage("nickserv", 
+                    "INFO " + BitcoinWot.LOGIN.getjTextField1().getText());
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

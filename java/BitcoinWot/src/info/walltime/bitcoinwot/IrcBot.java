@@ -68,6 +68,9 @@ public class IrcBot extends PircBot {
 
                 JOptionPane.showMessageDialog(null, 
                         "Legal! Você qualificou um usuário com sucesso! :)");
+            } else if (message.contains("Username already registered")) {
+                JOptionPane.showMessageDialog(null,
+                            "Você já está registrado no OTC WoT. Tente fazer login.");
             }
         }
     }
