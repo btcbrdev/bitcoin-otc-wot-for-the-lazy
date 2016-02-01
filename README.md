@@ -28,3 +28,5 @@ RudRGVWFosuSiI/lkWvE
 =AlcT
 -----END PGP SIGNATURE-----
 ```
+
+Atestado acima publicado no Blockchain via deedbot.org
