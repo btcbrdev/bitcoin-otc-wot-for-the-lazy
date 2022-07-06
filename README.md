@@ -4,4 +4,4 @@
 
 Instale o Java primeiro, caso não tenha.
 
-No Linux use java -jar <jar-file> e no Windows basta clicar duas vezes.
+No Linux use `java -jar <jar-file>` e no Windows basta clicar duas vezes.
