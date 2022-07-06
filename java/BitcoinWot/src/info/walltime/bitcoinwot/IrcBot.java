@@ -84,7 +84,7 @@ public class IrcBot extends PircBot {
                 System.out.println("Notice: " + sourceNick + ": " + notice);
             }
 
-            if (notice.contains("is not registered")) {
+            if (notice.contains("is not registered") || notice.contains("isn\'t registered")) {
                 
                 if (!BitcoinWot.REGISTERING.get()) {
                     JOptionPane.showMessageDialog(null, 
