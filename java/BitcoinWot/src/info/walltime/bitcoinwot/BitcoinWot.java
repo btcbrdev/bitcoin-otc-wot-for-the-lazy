@@ -47,6 +47,10 @@ public class BitcoinWot {
         try {
             Desktop.getDesktop().browse(new URL(urlString).toURI());
         } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, 
+                           "Não foi possível abrir o link. Abra manualmente: " 
+                                    + urlString);
+            
             e.printStackTrace();
         }
     }
