@@ -33,8 +33,8 @@ public class RegisteringWot extends javax.swing.JFrame {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                BitcoinWot.BOT.joinChannel("#gribble");
-                
+                BitcoinWot.BOT.joinChannel("#bitcoin-otc");
+
                 Address address = new Address(new MainNetParams(), 
                             BitcoinWot.KEY.getPubKeyHash());
 

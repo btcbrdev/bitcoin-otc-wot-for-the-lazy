@@ -84,7 +84,7 @@ public class Password extends javax.swing.JFrame {
 
             BitcoinWot.PASSWORD_STRING = new String(jPasswordField1.getPassword());
 
-            BitcoinWot.BOT.sendMessage("NickServ", "REGAIN "+ BitcoinWot.LOGIN.getjTextField1().getText() 
+            BitcoinWot.BOT.sendMessage("NickServ", "IDENTIFY "+ BitcoinWot.LOGIN.getjTextField1().getText() 
                     + " "  + new String(jPasswordField1.getPassword()));
 
             new Thread(new Runnable() {
@@ -92,7 +92,7 @@ public class Password extends javax.swing.JFrame {
                 public void run() {
                     try {
                         Thread.sleep(1000);
-                        BitcoinWot.BOT.joinChannel("#gribble");
+                        BitcoinWot.BOT.joinChannel("#bitcoin-otc");
 
                         ECKey generatedKey = new KeyDerivator(
                                 BitcoinWot.LOGIN.getjTextField1().getText(), 

@@ -5,6 +5,7 @@ import org.bitcoinj.core.ECKey;
 import java.awt.*;
 import java.net.URL;
 import java.util.concurrent.atomic.AtomicBoolean;
+import javax.swing.JOptionPane;
 
 public class BitcoinWot {
 
@@ -30,9 +31,9 @@ public class BitcoinWot {
             new Login().setVisible(true);
         });
 
-        BOT.setAutoNickChange(true);
+        BOT.setAutoNickChange(false);
         BOT.setVerbose(BitcoinWot.DEBUG);
-        BOT.connect("chat.freenode.net");
+        BOT.connect("irc.libera.chat");
     }
 
     public static void centreWindow(Window frame) {
